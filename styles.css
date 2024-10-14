@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fdf5f8;
+    overflow: hidden;
+}
+
+.pagina {
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Cursive', sans-serif;
+}
+
+.corazones h1 {
+    font-size: 3em;
+    color: #ff87b6;
+    margin-bottom: 20px;
+}
+
+.corazones p {
+    font-size: 1.7em;
+    color: #1d3557;
+}
+
+/* Botón de sorpresa hermoso */
+.btn-sorpresa {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background-color: #ff87b6;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1; /* Asegurar que esté por encima de otros elementos */
+}
+
+.btn-sorpresa:hover {
+    background-color: #e63946;
+    transform: scale(1.1); /* Agrandar al pasar el cursor */
+}
+
+#pagina-presentacion {
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pagina-sorpresa {
+    background-color: #ffe4e1;
+}
+
+.mensaje-final {
+    font-size: 1.5em;
+    color: #1d3557;
+    margin-top: 20px;
+}
+
+.corazones-flotantes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.corazon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff87b6;
+    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 50% 81%, 19% 100%, 0% 38%);
+    animation: flotar 7s linear infinite;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.carrusel .fotos {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carrusel .fotos img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel .fotos img.foto-activa {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 2em;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 20px;
+}

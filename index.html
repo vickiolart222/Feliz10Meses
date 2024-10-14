@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Amor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página de presentación -->
+    <div id="pagina-presentacion" class="pagina">
+        <div class="corazones">
+            <h1>Te tengo una sorpresa tan especial como Tu</h1>
+            <p>¡Gracias por estar a mi lado! Preciona el botoncito mi princesa.</p>
+            <button class="btn-sorpresa" onclick="mostrarSorpresa()">Ver Sorpresa 💖</button>
+            <div class="corazones-flotantes" id="corazones-flotantes"></div>
+        </div>
+    </div>
+
+    <!-- Página de la sorpresa -->
+    <div id="pagina-sorpresa" class="pagina" style="display:none;">
+        <h2>¡Feliz 10 meses, vida de mi vida, TE AMO MI REINA HERMOSA!</h2>
+        <p>Gracias por ser mi lucero y mi guía en todo momento. Te amo mucho.</p>
+        <div class="carrusel">
+            <button class="prev" onclick="cambiarFoto(-1)">&#10094;</button>
+            <div class="fotos">
+                <img src="./recursos/amor.jpg" class="foto-activa">
+                <img src="recursos/especial.jpg">
+                <img src="recursos/mi amor.jpg">
+                <img src="recursos/momentos.jpg">
+                <img src="recursos/te amoooo mi vida.jpg">
+                <img src="recursos/te amor.jpg">
+                <img src="recursos/vida.jpg">
+            </div>
+            <button class="next" onclick="cambiarFoto(1)">&#10095;</button>
+        </div>
+        <p class="mensaje-final">Espero que este sea el principio de un álbum que dure para toda la vida.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
